@@ -8,6 +8,6 @@ jobs:
   triage:
     uses: devops-dabu/reusable/.github/workflows/reusable-lab.yml@main
     with:
-        repo-token: a
-        config-path: b
+        repo-token: "a"
+        config-path: "b"
 
