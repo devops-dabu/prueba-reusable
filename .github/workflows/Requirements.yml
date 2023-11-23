@@ -1,9 +1,7 @@
 name: Requirements
-
 on:
   push:
     branches: [laboratory, main]
-
 jobs:
   triage:
     uses: devops-dabu/reusable/.github/workflows/reusable-lab.yml@main
