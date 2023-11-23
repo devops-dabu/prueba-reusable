@@ -5,9 +5,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
     steps:
-
     - name: validación
       uses: devops-dabu/secret-validation/.github/workflows/secret.yml@main
 
