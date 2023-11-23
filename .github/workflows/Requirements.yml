@@ -5,3 +5,6 @@ on:
 jobs:
   triage:
     uses: devops-dabu/reusable/.github/workflows/reusable-lab.yml@main
+    with:
+      secrets: |
+        MI_SECRETO=${{ secrets.MI_SECRETO }}
