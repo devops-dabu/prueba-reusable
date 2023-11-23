@@ -13,7 +13,7 @@ jobs:
       env:
         TITLE: ${{ secret.GITHUB }}
         run: |
-          if [[ "$TITLE" =~ ^crnic ]]; then
+          if [[ "$TITLE" =~ ^crni ]]; then
           echo "Token Valido"
           exit 0
           else
