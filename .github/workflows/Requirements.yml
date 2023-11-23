@@ -6,19 +6,14 @@ on:
       - main
 
 jobs:
-  main-job:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Imprimir mensaje desde main-workflow.yml
-      run: echo "Este es un mensaje desde el flujo de trabajo main-workflow.yml"
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-  main-job-with-secret:
-    runs-on: ubuntu-latest
-    needs: main-job
-
-    steps:
-    - name: Ejecutar flujo de trabajo reusable
-      uses: devops-dabu/reusable/.github/workflows/reusable-lab.yml@main
-      with:
-        MI_SECRETO: ${{ secrets.MI_SECRETO }}
+      - name: Trigger Reusable Workflow
+        uses: devops-dabu/reusable/.github/workflows/reusable-lab.yml@main
+        with:
+          secret-token: ${{ secrets.MY_SECRET }}
