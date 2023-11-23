@@ -1,13 +1,9 @@
 name: Requirements
+
 on:
   push:
     branches: [laboratory, main]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: validación
-      uses: devops-dabu/secret-validation/.github/workflows/secret.yml@main
 
-    - name : escritura
-      uses: devops-dabu/reusable/.github/workflows/reusable-lab.yml@main
+jobs:
+  triage:
+    uses: devops-dabu/reusable/.github/workflows/reusable-lab.yml@main
