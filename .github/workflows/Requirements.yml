@@ -22,4 +22,3 @@ jobs:
       uses: devops-dabu/reusable/.github/workflows/reusable-lab.yml@main
       with:
         MI_SECRETO: ${{ secrets.MI_SECRETO }}
-
