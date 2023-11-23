@@ -4,7 +4,12 @@ on:
     branches: [laboratory, main]
 jobs:
   triage:
-    uses: devops-dabu/reusable/.github/workflows/reusable-lab.yml@main
-    with:
-      secrets: |
-        MI_SECRETO=${{ secrets.MI_SECRETO }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Ejecutar flujo de trabajo reusable
+      uses: devops-dabu/reusable/.github/workflows/reusable-lab.yml@main
+      with:
+        secreto-entrada: ${{ secrets.MI_SECRETO }} # Pasamos el secreto al flujo de trabajo reusable
