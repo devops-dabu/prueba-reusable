@@ -1,0 +1,9 @@
+name: Requirements
+
+on:
+  pull_request:
+    branches: [aboratory, main]
+
+jobs:
+  triage:
+    uses: devops-dabu/reusable/.github/workflows/eusable-lab.yml@v1.1.0
