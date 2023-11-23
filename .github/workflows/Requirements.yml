@@ -6,4 +6,4 @@ on:
 
 jobs:
   triage:
-    uses: devops-dabu/reusable/.github/workflows/eusable-lab.yml@v1.1.0
+    uses: devops-dabu/reusable/.github/workflows/eusable-lab.yml@v1.1
