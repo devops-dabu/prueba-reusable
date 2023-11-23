@@ -9,5 +9,5 @@ jobs:
     uses: devops-dabu/reusable/.github/workflows/reusable-lab.yml@main
     with:
         repo-token: a
-        configuration-path: b
+        config-path: b
 
