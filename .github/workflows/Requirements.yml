@@ -1,4 +1,4 @@
-name: Main Workflow
+name: Call Reusable Workflow
 
 on:
   push:
@@ -6,14 +6,12 @@ on:
       - main
 
 jobs:
-  build:
+  call-reusable-workflow:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Trigger Reusable Workflow
         uses: devops-dabu/reusable/.github/workflows/reusable-lab.yml@main
         with:
-          secret-token: ${{ secrets.MY_SECRET }}
+          workflow: 'reusable-workflow.yml'
+          required-secret: ${{ secrets.MY_REQUIRED_SECRET }}
