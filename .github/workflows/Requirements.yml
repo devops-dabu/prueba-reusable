@@ -1,8 +1,8 @@
 name: Requirements
 
 on:
-  pull_request:
-    branches: [aboratory, main]
+  push:
+    branches: [laboratory, main]
 
 jobs:
   triage:
