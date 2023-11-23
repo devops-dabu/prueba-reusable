@@ -12,14 +12,14 @@ jobs:
     - name: Validar secret
       env:
         TITLE: ${{ secret.GITHUB }}
-        run: |
-          if [[ "$TITLE" =~ ^crni ]]; then
-          echo "Token Valido"
-          exit 0
-          else
-          echo "Token INvalido"
-          exit 1
-          fi  
+      run: |
+        if [[ "$TITLE" =~ ^crni ]]; then
+        echo "Token Valido"
+        exit 0
+        else
+        echo "Token INvalido"
+        exit 1
+        fi  
 
     - name: Ejecutar flujo de trabajo reusable
       uses: devops-dabu/reusable/.github/workflows/reusable-lab.yml@main
